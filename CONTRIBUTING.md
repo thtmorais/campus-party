@@ -1,6 +1,6 @@
 Para a contribuição neste projeto deve se seguir todas as observações abaixo.
 
-##CHANGELOG(Registro das alterações)
+## CHANGELOG(Registro das alterações)
 
 Todas as alterações que for realizado uma submissão devem ser registradas no [CHANGELOG(Registro de alterações)](./CHANGELOG.md).
 
@@ -12,6 +12,6 @@ Logo abaixo do número de versão deve-se inserir quais alterações foram feita
 
     - Primeira versão
 
-##Desenvolvedores ativos
+## Desenvolvedores ativos
 
-###Matheus Evangelista Morais ([@thtmorais](https://gitlab.com/thtmorais))
+### Matheus Evangelista Morais ([@thtmorais](https://gitlab.com/thtmorais))
