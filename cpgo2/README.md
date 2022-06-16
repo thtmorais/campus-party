@@ -138,7 +138,7 @@ Utilizando ```-it``` o container irá "morrer" ao fechar, e executando com ```-d
 
 ## Como criar minha própria imagem?
 
-Para criar sua prórpia imagem, devemos conhecer o ```Dockerfile```, que resumidamente possui os seguintes comandos:
+Para criar sua própia imagem, devemos conhecer o ```Dockerfile```, que resumidamente possui os seguintes comandos:
 
 ```FROM```: imagem de modelo
 
