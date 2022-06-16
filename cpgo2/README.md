@@ -41,7 +41,7 @@ Caso não possua instalado estes requisitos pode-se utilizar o [Play with Docker
 
 ## Mãos a massa
 
-Primeiro para questão de afinidades e possuir uma cópia do tutorial do próprio docker vamos executar:
+Primeiro para questão de afinidades e possuir uma cópia do tutorial do próprio Docker vamos executar:
 
 ```shell
 docker run -d -p 80:80 docker/getting-started
@@ -158,9 +158,9 @@ Ao utilizar um ```ENTRYPOINT``` o ```CMD``` fica somente como parâmetros.
 
 Certo, com estes comandos já podemos iniciar nossa própria imagem. Vamos lá!
 
-Baixe estes arquivos [aqui](app.zip).
+Baixe os arquivos disponibilizados neste [link](app.zip).
 
-<b>Obs:</b> para quem estiver usando o Play with Docker baixe e joque o arquivo direto na linha de comando do navegador.
+<b>OBS:</b> para quem estiver usando o Play with Docker baixe e arraste e solte o arquivo direto na linha de comando do navegador.
 
 Agora crie um arquivo chamado ```Dockerfile``` no mesmo diretório que se encontra o ```package.json``` da seguinte maneira:
 
@@ -178,7 +178,7 @@ RUN yarn install --production
 CMD ["node", "src/index.js"]
 ```
 
-<b>Obs:</b> para quem estiver usando o Play with Docker:
+<b>OBS:</b> para quem estiver usando o Play with Docker e deseja editar os aquivos por ali mesmo:
 
 ```shell
 apk add nano

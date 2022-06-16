@@ -2,9 +2,12 @@
 
 Este repositório foi criado para disponibilizar os contéudos ministrados por <b>Matheus Evangelista Morais</b> durante algumas Campus Party pelo Brasil.
 
-## Sobre mim
+# Conteúdos minsitrados
 
-Desde 1997 melhorando o MVP, com algumas atualizações nas versões 2015 (técnico em informática para internet) e em lançamento de uma nova versão 202[?] (bacharel em ciência da computação).
+### #CPGO (Em breve)
+### [#CPGO2](./cpgo2)
+
+## Sobre mim
 
 Meu começo na área de tecnologia foi cerca de 10 anos atrás, onde me ingressei no curso técnico integrado ao ensino médio em informática para internet no IFG - Campus Anápolis, onde fiquei apaixonado pelo desenvolvimento web e empreendedorismo rapidamente.
 
@@ -41,8 +44,3 @@ Continuo sempre antenado e participando ativamente de evento, comunidades e tudo
 # Rede sociais
 
 [Twitter](https://twitter.com/thtmorais) | [Instagram](https://instagram.com/thtmorais) | [Telegram](https://t.me/thtmorais) | [GitHub](https://github.com/thtmorais) | [GitLab](https://gitlab.com/thtmorais) | [LinkedIn](https://linkedin.com/in/thtmorais)
-
-# Conteúdos minsitrados
-
-### #CPGO1 (Em breve)
-### [#CPGO2](./cpgo2)
