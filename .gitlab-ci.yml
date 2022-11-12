@@ -26,16 +26,6 @@ test-job:
   script:
     - composer install
     - vendor/bin/codecept run --xml --html --coverage --coverage-xml --coverage-html --coverage-cobertura
-  artifacts:
-    expose_as: "coverage"
-    name: "coverage"
-    paths:
-      - tests/_output/coverage/
-    reports:
-      coverage_report:
-        coverage_format: cobertura
-        path: cpbr14/yii2/tests/_output/cobertura.xml
-      junit: cpbr14/yii2/tests/_output/report.xml
   only:
     - merge_requests
   interruptible: true
