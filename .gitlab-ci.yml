@@ -19,3 +19,40 @@ build-job:
   only:
     - merge_requests
   interruptible: true
+
+test-job:
+  stage: test
+  image: registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME
+  script:
+    - composer install
+    - vendor/bin/codecept run --xml --html --coverage --coverage-xml --coverage-html --coverage-cobertura
+  artifacts:
+    expose_as: "coverage"
+    name: "coverage"
+    paths:
+      - tests/_output/coverage/
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: tests/_output/cobertura.xml
+      junit: tests/_output/report.xml
+    only:
+      - merge_requests
+    interruptible: true
+
+deploy-job:
+  stage: deploy
+  services:
+      - name: docker:dind
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+    - docker build -t registry.gitlab.com/imuv/imuv:latest .
+
+    - docker push registry.gitlab.com/imuv/imuv:latest
+
+    - docker logout $CI_REGISTRY
+  only:
+    - main
+  interruptible: true
+
