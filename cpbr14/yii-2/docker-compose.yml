@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  app:
+    container_name: yii
+    build: .
+    restart: unless-stopped
+    ports:
+      - '1080:880'
+      - '1443:443'
+    volumes:
+      - ./.:/app
+    tmpfs:
+      - /app/runtime
+      - /app/web/assets
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    command: bash -c "chmod -R 777 /app/runtime /app/web/assets && composer install && supervisord -c /etc/supervisor/supervisord.conf"
