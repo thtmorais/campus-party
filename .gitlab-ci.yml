@@ -34,8 +34,8 @@ test-job:
     reports:
       coverage_report:
         coverage_format: cobertura
-        path: tests/_output/cobertura.xml
-      junit: tests/_output/report.xml
+        path: cpbr14/yii2/tests/_output/cobertura.xml
+      junit: cpbr14/yii2/tests/_output/report.xml
   only:
     - merge_requests
   interruptible: true
