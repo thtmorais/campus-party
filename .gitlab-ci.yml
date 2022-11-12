@@ -36,9 +36,9 @@ test-job:
         coverage_format: cobertura
         path: tests/_output/cobertura.xml
       junit: tests/_output/report.xml
-    only:
-      - merge_requests
-    interruptible: true
+  only:
+    - merge_requests
+  interruptible: true
 
 deploy-job:
   stage: deploy
