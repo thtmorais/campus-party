@@ -1,11 +1,5 @@
 FROM dmstr/php-yii2:latest-nginx
 
-ENV TZ=America/Sao_Paulo
-
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install -y --no-install-recommends libc-client-dev libkrb5-dev unzip
-
 COPY . /app
 
 WORKDIR /app
