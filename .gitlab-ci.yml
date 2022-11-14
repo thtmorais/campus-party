@@ -24,6 +24,7 @@ test-job:
   stage: test
   image: registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME
   script:
+    - cd cpbr14/yii-2
     - composer install
     - vendor/bin/codecept run --xml --html --coverage --coverage-xml --coverage-html --coverage-cobertura
   only:
