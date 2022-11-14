@@ -6,6 +6,7 @@ Este repositório foi criado para disponibilizar os contéudos ministrados por <
 
 ### #CPGO (Em breve)
 ### [#CPGO2](./cpgo2)
+### [#CPBR14](./cpbr14)
 
 ## Sobre mim
 

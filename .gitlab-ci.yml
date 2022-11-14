@@ -11,9 +11,8 @@ build-job:
   services:
     - name: docker:dind
   script:
-    - echo $SENHA
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME .
+    - docker build -t registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME cpbr14/yii2/
     - docker push registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME
     - docker logout $CI_REGISTRY
   only:
@@ -24,7 +23,7 @@ test-job:
   stage: test
   image: registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME
   script:
-    - composer install --no-dev
+    - composer install
     - vendor/bin/codecept run --xml --html --coverage --coverage-xml --coverage-html --coverage-cobertura
   only:
     - merge_requests
@@ -36,11 +35,8 @@ deploy-job:
     - name: docker:dind
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-
     - docker build -t registry.gitlab.com/imuv/imuv:latest .
-
     - docker push registry.gitlab.com/imuv/imuv:latest
-
     - docker logout $CI_REGISTRY
   only:
     - main
