@@ -11,8 +11,9 @@ build-job:
   services:
     - name: docker:dind
   script:
+    - cd cpbr14/yii-2
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME cpbr14/yii-2
+    - docker build -t registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME .
     - docker push registry.gitlab.com/thtmorais/campus-party:$CI_COMMIT_REF_NAME
     - docker logout $CI_REGISTRY
   only:
@@ -34,6 +35,7 @@ deploy-job:
   services:
     - name: docker:dind
   script:
+    - cd cpbr14/yii-2
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t registry.gitlab.com/imuv/imuv:latest .
     - docker push registry.gitlab.com/imuv/imuv:latest
