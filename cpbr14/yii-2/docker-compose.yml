@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   app:
-    container_name: yii
+    container_name: cpbr14
     build: .
     restart: unless-stopped
     ports:
